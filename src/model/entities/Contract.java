@@ -20,6 +20,10 @@ public class Contract {
     public Contract() {
     }
 
+    public void addInstallment(Installment installment) {
+        installmentList.add(installment);
+    }
+
     public Integer getNumber() {
         return number;
     }

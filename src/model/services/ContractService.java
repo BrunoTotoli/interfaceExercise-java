@@ -22,7 +22,7 @@ public class ContractService {
             Date date = addMonths(contract.getDate(), i);
             double updateSum = sum + paymentService.interest(sum, i);
             double fullSum = updateSum + paymentService.fee(updateSum);
-            contract.getInstallmentList().add(new Installment(date, fullSum));
+            contract.addInstallment(new Installment(date, fullSum));
         }
 
     }
